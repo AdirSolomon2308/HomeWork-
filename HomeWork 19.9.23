@@ -1,0 +1,143 @@
+exe1:
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type the first student: ");
+    String str1 = scan.next();
+    System.out.print("Type the second student: ");
+    String str2 = scan.next();
+    System.out.print("Type the third student: ");
+    String str3 = scan.next();
+    if(str1.compareTo(str2)<0&&str2.compareTo(str3)<0)
+    {
+      System.out.println(str1);
+      System.out.println(str2);
+      System.out.println(str3);
+    }
+    else if(str1.compareTo(str2)<0&&str3.compareTo(str2)<0)
+    {
+      System.out.println(str1);
+      System.out.println(str3);
+      System.out.println(str2);
+    }
+    else if(str2.compareTo(str1)<0&&str1.compareTo(str3)<0)
+    {
+      System.out.println(str2);
+      System.out.println(str1);
+      System.out.println(str3);
+    }
+    else if(str2.compareTo(str3)<0&&str3.compareTo(str1)<0)
+    {
+      System.out.println(str2);
+      System.out.println(str3);
+      System.out.println(str1);
+    }
+    else if(str3.compareTo(str1)<0&&str1.compareTo(str2)<0)
+    {
+      System.out.println(str3);
+      System.out.println(str1);
+      System.out.println(str2);
+    }
+    else if(str3.compareTo(str2)<0&&str2.compareTo(str1)<0)
+    {
+      System.out.println(str3);
+      System.out.println(str2);
+      System.out.println(str1);
+    }
+  }
+}
+
+exe2:
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Enter a sentence with 4 words: ");
+    String s = scan.nextLine();
+    int len = s.length();
+    System.out.print("The length of the sentence is: "+len);
+  }
+}
+
+exe3:
+import java.util.Scanner;
+
+import org.junit.runner.manipulation.Sortable;
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type a string that has 3 letters: ");
+    String str = scan.next();
+    int len = str.length();
+    if(len<=3&&len>0)
+    {
+      if(str.charAt(0) == str.charAt(2))
+      {
+        System.out.print("True");
+      }
+      else
+      {
+        System.out.print("False");
+      }
+    } 
+  }
+}
+
+exe 4:
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Type a word: ");
+    String str = scan.next();
+    System.out.print(str.charAt(2));
+    System.out.print(str.charAt(1));
+    System.out.print(str.charAt(0));
+  }
+}
+
+exe5:
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type a word: ");
+    String str = scan.next();
+    str = str.replace('a', '*');
+    str = str.replace('e', '*');
+    str = str.replace('i', '*');
+    str = str.replace('o', '*');
+    str = str.replace('u', '*');
+    System.out.println(str);
+  }
+}
+
+exe 6:
+import java.util.Random;
+class Main {
+  public static void main(String[] args) {
+    Random r = new Random();
+    int num = r.nextInt(1,100);
+    if(num>0&&num<10)
+    {
+      System.out.println("The number is one digit");
+    }
+    else if(num>9&&num<100)
+    {
+      System.out.println("The number is second digit");
+    }
+    if(num%2 == 0&&num%3 == 0)
+    {
+      System.out.println("The number is divisible with 2 and 3");
+    }
+    else if(num%3 == 0)
+    {
+      System.out.println("The number is divisible with 3");
+    }
+    else if(num%2==0)
+    {
+      System.out.println("The number is divisible with 2");
+    }
+  }
+}
